@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  build:
+  demo4-build:
     docker:
       - image: cimg/node:20.6.1
     steps:
@@ -16,7 +16,7 @@ orbs:
   sonarcloud: sonarsource/sonarcloud@2.0.0
 
 workflows:
-  main:
+  demo4:
     jobs:
-      - build:
+      - demo4-build:
           context: SonarCloud
