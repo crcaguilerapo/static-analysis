@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  build:
+  demo5-build:
     docker:
       - image: cimg/openjdk:20.0.1
     steps:
@@ -16,7 +16,7 @@ orbs:
   sonarcloud: sonarsource/sonarcloud@2.0.0
 
 workflows:
-  main:
+  demo5:
     jobs:
-      - build:
+      - demo5-build:
           context: SonarCloud
