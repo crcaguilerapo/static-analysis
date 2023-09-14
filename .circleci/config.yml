@@ -30,6 +30,7 @@ workflows:
           modules: |
             services/demo1
             services/demo2
+            services/demo3
 
 orbs:
   # An "embedded" orb to facilitate config splitting
