@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Install dependencies and build project
-          command: cd services/demo4 && npm install && node index.js
+          command: cd services/demo4 && npm install
       - sonarcloud/scan:
           project_root: services/demo4
 
