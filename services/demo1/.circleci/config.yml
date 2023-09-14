@@ -16,7 +16,7 @@ orbs:
   sonarcloud: sonarsource/sonarcloud@2.0.0
 
 workflows:
-  main:
+  demo1:
     jobs:
       - build:
           context: SonarCloud
