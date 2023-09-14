@@ -1,0 +1,2 @@
+sonar-scanner.bat -D"sonar.token=sqp_29d7d20f11047b964c1c574201c4f4b7fa0bc416"
+docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
