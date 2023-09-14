@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:20.6.1
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies and build project
+          command: cd services/demo4 && npm install && node index.js
+      - sonarcloud/scan:
+          project_root: services/demo4
+
+orbs:
+  sonarcloud: sonarsource/sonarcloud@2.0.0
+
+workflows:
+  main:
+    jobs:
+      - build:
+          context: SonarCloud
