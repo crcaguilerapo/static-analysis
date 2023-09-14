@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Install dependencies and build project
-          command: pwd && pip install poetry && poetry install
+          command: ls && pip install poetry && poetry install
       - sonarcloud/scan
 
 orbs:
