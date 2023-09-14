@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  build:
+  demo1-build:
     docker:
       - image: cimg/python:3.11.5
     steps:
@@ -18,5 +18,5 @@ orbs:
 workflows:
   demo1:
     jobs:
-      - build:
+      - demo1-build:
           context: SonarCloud
