@@ -2,11 +2,11 @@ version: 2.1
 
 jobs:
   build:
+    working_directory: services/demo1
     docker:
       - image: cimg/python:3.11.5
     steps:
-      - checkout:
-          path: ~/services/demo1
+      - checkout
       - run:
           name: Install dependencies and build project
           command: pip install poetry && poetry install
