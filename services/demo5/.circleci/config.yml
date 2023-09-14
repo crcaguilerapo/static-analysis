@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/openjdk:20.0.1
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies and build project
+          command: cd services/demo5 && java --version
+      - sonarcloud/scan:
+          project_root: services/demo5
+
+orbs:
+  sonarcloud: sonarsource/sonarcloud@2.0.0
+
+workflows:
+  main:
+    jobs:
+      - build:
+          context: SonarCloud
