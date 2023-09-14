@@ -7,5 +7,5 @@ workflows:
     jobs:
       - path-filtering/filter:
           base-revision: main
-          config-path: services/demo1/.circleci/config.yml
-          mapping: services/demo1/*
+          config-path: monorepos/services/demo1/.circleci/config.yml
+          mapping: monorepos/services/demo1/*
