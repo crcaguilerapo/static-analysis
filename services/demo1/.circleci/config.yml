@@ -5,12 +5,12 @@ jobs:
     docker:
       - image: cimg/python:3.11.5
     steps:
-      - checkout
+      - checkout:
+          path: ~/services/demo1
       - run:
           name: Install dependencies and build project
-          command: cd services/demo1 && pip install poetry && poetry install
-      - sonarcloud/scan:
-          project_root: services/demo1
+          command: pip install poetry && poetry install
+      - sonarcloud/scan
 
 orbs:
   sonarcloud: sonarsource/sonarcloud@1.0.3
