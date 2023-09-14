@@ -9,7 +9,8 @@ jobs:
       - run:
           name: Install dependencies and build project
           command: cd services/demo1 && pip install poetry && poetry install
-      - sonarcloud/scan
+      - sonarcloud/scan:
+          project_root: services/demo1
 
 orbs:
   sonarcloud: sonarsource/sonarcloud@1.0.3
