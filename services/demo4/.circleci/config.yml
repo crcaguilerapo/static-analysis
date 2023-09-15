@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   demo4-build:
     docker:
-      - image: cimg/node:20.6.1
+      - image: node:latest
     steps:
       - checkout
       - run:
