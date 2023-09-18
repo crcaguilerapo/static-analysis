@@ -1,0 +1,17 @@
+version: 2.1
+
+jobs:
+  demo6-build:
+    docker:
+      - image: 'circleci/openjdk:11-jdk'
+    steps:
+      - checkout
+      - run:
+          name: Analyze on SonarCloud
+          command: cd services/demo6 && gradle build sonarqube
+
+workflows:
+  demo6:
+    jobs:
+      - demo6-build:
+          context: SonarCloud
