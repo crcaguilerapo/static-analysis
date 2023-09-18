@@ -7,8 +7,26 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Sonar
+          command: |
+            cd services/demo3
+            wget -q https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+            echo "Download completed."
+            echo "Unziping downloaded file..."
+            unzip sonar-scanner-cli-5.0.1.3006-linux.zip
+            echo "Unzip completed."
+            rm sonar-scanner-cli-5.0.1.3006-linux.zip
+            sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner \
+              -Dsonar.organization=crcaguilerapo \
+              -Dsonar.projectKey=crcaguilerapo_demo3 \
+              -Dsonar.qualitygate.wait=true \
+              -Dsonar.sources=. \
+              -Dsonar.host.url=https://sonarcloud.io
+
+      - run:
           name: Install dependencies and build project
-          command: cd services/demo3 && pip install poetry && poetry install
+          command: |
+            cd services/demo3 && pip install poetry && poetry install
 
 workflows:
   demo3:
