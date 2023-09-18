@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install dependencies and build project
+          name: Sonar
           command: |
             wget -q https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
             echo "Download completed."
