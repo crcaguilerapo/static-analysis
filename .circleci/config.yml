@@ -33,6 +33,7 @@ workflows:
             services/demo3
             services/demo4
             services/demo5
+            services/demo6
 
 orbs:
   # An "embedded" orb to facilitate config splitting
