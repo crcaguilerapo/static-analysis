@@ -16,6 +16,10 @@ jobs:
             echo "Unzip completed."
             rm sonar-scanner-cli-5.0.1.3006-linux.zip
             ls
+
+      - run:
+          name: Install dependencies and build project
+          command: |
             cd services/demo3 && pip install poetry && poetry install
 
 workflows:
