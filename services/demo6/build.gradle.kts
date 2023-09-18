@@ -21,6 +21,7 @@ sonar {
         property("sonar.projectKey", "crcaguilerapo_demo6")
         property("sonar.organization", "crcaguilerapo")
         property("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.qualitygate.wait", "true")
     }
 }
 
