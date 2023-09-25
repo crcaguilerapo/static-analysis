@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Install dependencies and build project
-          command: cd services/demo5 && java --version
+          command: cd services/demo5 && gradle build
       - sonarcloud/scan:
           project_root: services/demo5
 
