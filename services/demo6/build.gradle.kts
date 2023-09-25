@@ -1,7 +1,7 @@
 plugins {
     id("java")
     id("org.sonarqube") version "4.3.1.3277"
-
+    id("jacoco")
 }
 
 group = "org.example"
@@ -27,4 +27,12 @@ sonar {
 
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
+}
+
+tasks.jacocoTestReport {
+    reports {
+        xml.required.set(true)
+        csv.required.set(false)
+        html.outputLocation.set(layout.buildDirectory.dir("jacocoHtml"))
+    }
 }
