@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Analyze on SonarCloud
-          command: cd services/demo6 && gradle test jacocoTestReport sonarqube
+          command: cd services/demo6 && gradle build jacocoTestReport sonarqube
 
 workflows:
   demo6:
