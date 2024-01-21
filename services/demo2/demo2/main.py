@@ -1,3 +1,7 @@
+def too_many_parameters(param1, param2, param3, param4, param5, param6, param7):
+    ...
+
+
 def calcular_area_cuadrado(lado):
     return lado * lado
 
