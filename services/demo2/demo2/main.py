@@ -20,3 +20,4 @@ def unused_variable():
     return 5
 
 print("hello world!!")
+print("hello world!!")
