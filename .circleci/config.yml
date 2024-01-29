@@ -22,7 +22,7 @@ workflows:
   setup-workflow:
     when: << pipeline.parameters.run-setup >>
     jobs:
-      - config-splitting/setup-dynamic-config:
+      - dynamic-workflows-orb/setup-dynamic-config:
           base-revision: main
           # If A is modified, the job for A will run
           # Similarly if B is modified, the job for B will run
@@ -36,4 +36,4 @@ workflows:
             services/demo6
 
 orbs:
-  config-splitting: crcaguilerapo/dynamic-workflows-orb@2.0.0
+  dynamic-workflows-orb: crcaguilerapo/dynamic-workflows-orb@2.0.0
