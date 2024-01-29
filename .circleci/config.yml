@@ -36,4 +36,4 @@ workflows:
             services/demo6
 
 orbs:
-  dynamic-workflows-orb: crcaguilerapo/dynamic-workflows-orb@2.0.1
+  dynamic-workflows-orb: crcaguilerapo/dynamic-workflows-orb@2.0.2
