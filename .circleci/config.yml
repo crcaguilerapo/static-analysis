@@ -23,7 +23,7 @@ workflows:
     when: << pipeline.parameters.run-setup >>
     jobs:
       - dynamic-workflows-orb/setup_dynamic_config:
-          base-revision: main
+          base_revision: main
           # If A is modified, the job for A will run
           # Similarly if B is modified, the job for B will run
           # If C is modified, then the jobs for both C and B (as a dependency) will run
